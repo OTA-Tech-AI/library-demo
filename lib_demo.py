@@ -1,17 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from langchain.chat_models import ChatAnyscale
-from langchain.callbacks.base import BaseCallbackHandler
-from langchain.memory import ChatMessageHistory
-from queue import Queue
-from threading import Thread
-import sys
-import time
 import requests
 import json
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
-import pandas as pd
+from utils.csv_utils import *
 
 # Constants
 INPUTMARKER_END = "-- END --"
@@ -91,9 +84,20 @@ def completions():
 @app.route('/api/csv', methods=['GET'])
 def get_csv():
     try:
-        # Load your CSV file
-        df = pd.read_csv('qa.csv')
-        return jsonify(df.to_dict(orient='records'))
+        data = read_csv("data/qa.csv")
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/csv/submit', methods=['POST'])
+def set_csv():
+    try:
+        data = request.json
+        if not data.get('question') or not data.get('answer'):
+            return jsonify({'error': 'Question and answer fields cannot be empty'}), 400
+        data['status'] = 0
+        add_row_to_csv('data/qa.csv', data)
+        return jsonify({'message': 'Data received successfully'}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
