@@ -101,5 +101,26 @@ def set_csv():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/csv/delete', methods=['POST'])
+def delete_csv_row():
+    try:
+        data = request.json
+        index = data.get('index')
+        question = data.get('question')
+        answer = data.get('answer')
+        if index is None:
+            return jsonify({'error': 'Index is required'}), 400
+
+        # Convert index to integer if it's passed as a string
+        index = int(index)
+        if delete_row_from_csv_by_index('data/qa.csv', index, question, answer):
+            return jsonify({'message': 'Row deleted successfully'}), 200
+        else:
+            return jsonify({'error': 'Row not found or could not be deleted'}), 404
+    except ValueError:
+        return jsonify({'error': 'Invalid index format'}), 400
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

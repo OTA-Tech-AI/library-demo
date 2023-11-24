@@ -24,24 +24,35 @@ def add_row_to_csv(filename, new_row):
     except Exception as e:
         print(f"Error occurred: {e}")
 
-def delete_row_from_csv_by_index(filename, index):
+def delete_row_from_csv_by_index(filename, index, question, answer):
     try:
         df = pd.read_csv(filename, index_col=0)
-        if index in df.index:
+
+        if index in df.index \
+            and df.at[index, 'question'] == question \
+            and df.at[index, 'answer'] == answer:
+
             df = df.drop(index, axis=0)
             df.to_csv(filename)
+            return True
         else:
             print(f"No row found at index {index}")
+            return False
     except Exception as e:
         print(f"Error occurred: {e}")
 
-def modify_row_in_csv_by_index(filename, index, new_data):
+def modify_row_in_csv_by_index(filename, index, question, answer, new_data):
     try:
         df = pd.read_csv(filename, index_col=0)
-        if index in df.index:
+        if index in df.index \
+            and df.at[index, 'question'] == question \
+            and df.at[index, 'answer'] == answer:
+
             df.loc[index] = new_data
             df.to_csv(filename)
+            return True
         else:
             print(f"No row found at index {index}")
+            return False
     except Exception as e:
         print(f"Error occurred: {e}")
