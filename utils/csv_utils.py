@@ -2,10 +2,11 @@ import pandas as pd
 
 def read_csv(filename, is_df=False):
     try:
-        df = pd.read_csv(filename)
+        df = pd.read_csv(filename, index_col=0)
+        df_reset = df.reset_index()
         if is_df:
-            return df
-        return df.to_dict(orient='records')
+            return df_reset
+        return df_reset.to_dict(orient='records')
     except FileNotFoundError:
         print(f"The file {filename} was not found.")
     except pd.errors.EmptyDataError:
