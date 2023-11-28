@@ -6,7 +6,7 @@ Education Library 12:30pm - 4:30pm
 Jordan Special Collections Closed
 Lederman Law Library 12:00pm - 10:00pm
 Archives Closed
-Watson Hall LINQ Closed",0
+Watson Hall LINQ Closed",1
 1,"Print, Scan, Copy","Print, Scan, Copy
 You can print, scan, and copy at most of our locations using our PrintQ system from your own device or by using our Computers.
 
@@ -17,4 +17,98 @@ For more details, please consult the following sections:
 Printing: https://library.queensu.ca/locations-hours/print-scan-copy/printing
 Scanning: https://library.queensu.ca/locations-hours/print-scan-copy/scanning
 Copying: https://library.queensu.ca/locations-hours/print-scan-copy/copying
-PrintQ: https://library.queensu.ca/locations-hours/print-scan-copy/printq",0
+PrintQ: https://library.queensu.ca/locations-hours/print-scan-copy/printq",1
+2,Use of Study Rooms & Bookable Computers,"Study rooms and bookable computers are available first come, first serve when not reserved
+Cancellations must occur before a booking has started
+Study rooms and bookable computers are available to all members of the Queen's community with an active NetID
+All group study rooms and bookable computers are bookable in 30 minute time slots
+A single booking is considered a minimum 30 minutes up to 240 minutes
+Study room and computer bookings share the same total hours
+Up to 2 bookings can be requested in a single day
+Bookings are limited to 10 hours per month across all locations 
+Study rooms and bookable computers are available for advance booking up until the end of the current term.
+Bookings can be made at any time, including during an active timeslot
+Bookable computers are available for 1 to 2 users at a time
+Our Code of Behaviour for Library Users applies while using group study rooms and bookable computers",1
+3,Printing,"You can print, scan, and copy at most of our locations using our PrintQ system. 
+
+Price
+Black & White:
+single sided $0.10 / printed side (8.5"" x 11"", 8.5"" x 14"")
+double sided $0.09 / printed side (8.5"" x 11"", 8.5"" x 14"")
+
+Colour:
+single sided $0.45 / printed side (8.5"" x 11"", 8.5"" x 14"")
+double sided $0.40 / printed side (8.5"" x 11"", 8.5"" x 14"")
+
+Printers
+All printers have the following features unless otherwise specified:
+
+Uses 8.5"" x 11"" and 8.5"" x 14"" paper
+Prints double-sided by default
+Can print in either black and white or colour
+Are multifunction (print, scan, copy) devices
+Are paid by using the PaperCut portal
+
+Printers available at Queen's University Library
+
+Stauffer Library
+Ground Floor, adjacent to the Information desk
+
+Douglas Library
+Ground Floor, adjacent to the Information desk
+
+Bracken Health Sciences Library
+Main Floor, near the entrance
+
+Education Library
+Main Floor, adjacent to the Information desk
+
+Lederman Law Library
+Main Floor, in the reading room
+Main Floor, in the reserves room",1
+4,Copying,"You can print, scan, and copy at most of our locations using our PrintQ system.
+
+Price
+Black & White:
+$0.10 / printed side (8.5""x 11"", 8.5"" x 14"")
+Colour:
+$0.45 / printed side (8.5""x 11"", 8.5"" x 14"")
+Copiers
+All copiers have the following features:
+
+Use 8.5"" x 11"" and 8.5"" x 14"" paper
+Can copy double-sided
+Can copy in either black and white or colour
+Are multifunction (print, scan, copy) devices
+Are paid for using the PaperCut portal to add funds",1
+5,PrintQ,"You can print, scan, and copy at all of our locations using our PrintQ system, either from your own device or by using our Computers: https://library.queensu.ca/locations-hours/computers.
+
+To print or copy, you will need to add credit to your account on the Queen's Library / Smith School of Business  PaperCut portal: https://printq.queensu.ca/.
+
+Log in with your Queen's NetID, then you can add credit using VISA, MasterCard, Visa Debit and Mastercard Debit.
+
+Additional details
+Any unused balance on your account, including when you leave Queen's or graduate can not be refunded.  
+If you are not a current Queen's student, staff or faculty member, please ask us about how to print at the Information Services desk. 
+Scanning to email is free for everyone.
+
+To print from library computers: Printing Instructions (https://assets.library.queensu.ca/Printing_at_the_Library.pdf)
+
+To print from your own device:
+Download and install the print drivers through your Papercut account in the Mobility Print tab
+
+Helpful tips
+Print jobs are sent from the software/app used for the document (i.e. Word, Excel Adobe Acrobat, Pages, Google Docs) 
+When installing the print driver on a Mac, make sure you use your Queen’s Net ID and password (not your Apple ID). 
+Always check your print settings prior to sending a job.  File adjustments at the printer are limited. MacBooks often default to 10 x 14 envelope size which will not print. Check that the print size is set for Letter (8 1/2 by 11). 
+Some devices default to colour regardless of the document. Print jobs can be downgraded from colour to grayscale and changed from single sided to double sided at the printer but cannot be upscaled to colour or have the print size adjusted. 
+Documents in OnQ or Google Drive may not print properly from the respective platform.  It is recommended that documents are downloaded to your device prior to printing.
+Large files sizes will take longer to print, or may not print at all. There is a maximum file size of 20 megabytes (MB).  Consider optimizing or compressing the document prior to printing.
+Print jobs can be sent from any location or device and released from any of our machines with the PrintQ system installed. (You can send a job from home and release it at Stauffer) 
+USB functions are no longer supported.  Printing is sent directly to Papercut from a device with the PrintQ driver installed.  Scanning is now done via email 
+Print jobs should be sent prior to logging in at the printer.  There may be a short lag between sending the job and appearing in the Print Release queue (especially during high volume times).
+Your username and password are your Queen’s Net ID and password.
+
+Need help?
+If you are having technical difficulty or trouble loading money through the payment gateway please visit the service desk. You can also ask Ask Us: https://library.queensu.ca/help-services/ask-us for help.",1
