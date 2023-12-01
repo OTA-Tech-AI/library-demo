@@ -2,7 +2,7 @@ import pandas as pd
 
 def read_csv(filename, is_df=False):
     try:
-        df = pd.read_csv(filename, index_col=0)
+        df = pd.read_csv(filename, index_col=0, encoding='ISO-8859-1')
         df_reset = df.reset_index()
         if is_df:
             return df_reset

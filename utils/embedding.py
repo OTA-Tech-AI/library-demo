@@ -5,7 +5,7 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.document_loaders import DataFrameLoader
 
 def change_status(path):
-	df = pd.read_csv(path, index_col=0)
+	df = pd.read_csv(path, index_col=0, encoding='ISO-8859-1')
 	df['status'] = 1
 	df.to_csv(path)
 
@@ -26,14 +26,14 @@ def generate_index_dataframe():
 
 	### FAQ Section ###
 	faq_csv_path = "data/qa.csv"
-	faq_df = pd.read_csv(faq_csv_path, index_col=0)
+	faq_df = pd.read_csv(faq_csv_path, index_col=0, encoding='ISO-8859-1')
 	faq_df['combined'] = faq_df['question'] + ": \n" + faq_df['answer']
 	faq_df.drop(columns=['status', 'question', 'answer'], inplace=True)
 	print("FAQ Section DataFrame: ", faq_df)
 
 	### General Knowledge / Information ###
 	knowledge_csv_path = "data/knowledge.csv"
-	knowledge_df = pd.read_csv(knowledge_csv_path, index_col=0)
+	knowledge_df = pd.read_csv(knowledge_csv_path, index_col=0, encoding='ISO-8859-1')
 	knowledge_df['combined'] = knowledge_df['title'] + ": \n" + knowledge_df['knowledge']
 	knowledge_df.drop(columns=['status', 'title', 'knowledge'], inplace=True)
 	print("General Knowledge Section DataFrame: ", knowledge_df)

@@ -1,14 +1,25 @@
 import requests
 
-def get_csv_data():
-    url = "http://localhost:5000/api/csv"
-    response = requests.get(url)
+def test_edit_sysprompt():
+    url = "http://localhost:5000/api/sysprompt/edit"
+    response = requests.post(url)
 
     if response.status_code == 200:
-        print("Success! Response Data:")
+        print("Success on edit! Response Data:")
         print(response.text)
     else:
-        print("Failed to retrieve data. Status code:", response.status_code)
+        print("Failed to edit sysprompt. Status code:", response.status_code)
+
+def test_reset_sysprompt():
+    url = "http://localhost:5000/api/sysprompt/reset"
+    response = requests.post(url)
+
+    if response.status_code == 200:
+        print("Success on reset! Response Data:")
+        print(response.text)
+    else:
+        print("Failed to reset sysprompt. Status code:", response.status_code)
 
 if __name__ == "__main__":
-    get_csv_data()
+    #test_edit_sysprompt()
+    test_reset_sysprompt()

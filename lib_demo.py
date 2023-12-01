@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
 from utils.csv_utils import *
+from constants.sys_prompt_constants import *
 import routes.local_faq_handler as FAQ_handler
 import routes.local_knowledge_handler as Knowledge_handler
 import routes.ota_request_handler as OTA_handler
+import routes.ota_sys_prompt_handler as Sys_Prompt_handler
 
 # Flask app initialization
 app = Flask(__name__)
@@ -24,5 +26,9 @@ app.add_url_rule('/api/libknowledge/submit', 'knowledge_set_csv', Knowledge_hand
 app.add_url_rule('/api/libknowledge/edit', 'knowledge_edit_csv_row', Knowledge_handler.edit_csv_row, methods=['POST'])
 app.add_url_rule('/api/libknowledge/delete', 'knowledge_delete_csv_row', Knowledge_handler.delete_csv_row, methods=['POST'])
 
+# update and reset system prompt
+app.add_url_rule('/api/sysprompt/edit', 'sys_prompt_edit', Sys_Prompt_handler.edit_sysprompt, methods=['POST'])
+app.add_url_rule('/api/sysprompt/reset', 'sys_prompt_reset', Sys_Prompt_handler.reset_sysprompt, methods=['POST'])
+
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=False)
