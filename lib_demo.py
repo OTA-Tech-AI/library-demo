@@ -27,6 +27,7 @@ app.add_url_rule('/api/libknowledge/edit', 'knowledge_edit_csv_row', Knowledge_h
 app.add_url_rule('/api/libknowledge/delete', 'knowledge_delete_csv_row', Knowledge_handler.delete_csv_row, methods=['POST'])
 
 # update and reset system prompt
+app.add_url_rule('/api/sysprompt', 'sys_prompt_get', Sys_Prompt_handler.get_sysprompt, methods=['GET'])
 app.add_url_rule('/api/sysprompt/edit', 'sys_prompt_edit', Sys_Prompt_handler.edit_sysprompt, methods=['POST'])
 app.add_url_rule('/api/sysprompt/reset', 'sys_prompt_reset', Sys_Prompt_handler.reset_sysprompt, methods=['POST'])
 
