@@ -3,6 +3,8 @@ from constants.sys_prompt_constants import *
 from constants.llm_constants import *
 from constants.sys_prompt_constants import *
 
+def health_check_response():
+    return jsonify({'message': 'System up!'}), 200
 
 def get_sysprompt():
     global SYS_PROMPT1

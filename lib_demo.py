@@ -11,6 +11,7 @@ import routes.ota_sys_prompt_handler as Sys_Prompt_handler
 app = Flask(__name__)
 CORS(app)
 
+app.add_url_rule('/', 'health_check', Sys_Prompt_handler.health_check_response, methods=['GET'])
 # OTA Action Handler
 app.add_url_rule('/v1/chat/completions', 'completions', OTA_handler.completions, methods=['POST'])
 
@@ -32,4 +33,4 @@ app.add_url_rule('/api/sysprompt/edit', 'sys_prompt_edit', Sys_Prompt_handler.ed
 app.add_url_rule('/api/sysprompt/reset', 'sys_prompt_reset', Sys_Prompt_handler.reset_sysprompt, methods=['POST'])
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=False)
+    app.run(port=5000, host='0.0.0.0', debug=False)

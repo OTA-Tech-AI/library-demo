@@ -29,9 +29,9 @@ def delete_row_from_csv_by_index(filename, index, cols_names, cols_values):
     try:
         df = pd.read_csv(filename, index_col=0)
 
-        if index in df.index and \
-            all(df.at[index, col] == val for col, val in zip(cols_names, cols_values)):
-
+        # if index in df.index and \
+        #     all(df.at[index, col] == val for col, val in zip(cols_names, cols_values)):
+        if index in df.index:
             df = df.drop(index, axis=0)
             df.to_csv(filename)
             return True
@@ -44,9 +44,9 @@ def delete_row_from_csv_by_index(filename, index, cols_names, cols_values):
 def modify_row_in_csv_by_index(filename, index, cols_names, cols_values, new_data):
     try:
         df = pd.read_csv(filename, index_col=0)
-        if index in df.index and \
-            all(df.at[index, col] == val for col, val in zip(cols_names, cols_values)):
-
+        # if index in df.index and \
+        #     all(df.at[index, col] == val for col, val in zip(cols_names, cols_values)):
+        if index in df.index:
             df.loc[index] = new_data
             df.to_csv(filename)
             return True
